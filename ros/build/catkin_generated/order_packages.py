@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = "/home/viewitpro/CarND-Capstone/ros/src"
+source_root_dir = "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/viewitpro/udacity_ws/devel;/home/viewitpro/r1d1_ws/devel;/opt/ros/kinetic".split(';') if "/home/viewitpro/udacity_ws/devel;/home/viewitpro/r1d1_ws/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel;/opt/ros/kinetic".split(';') if "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel;/opt/ros/kinetic" != "" else []

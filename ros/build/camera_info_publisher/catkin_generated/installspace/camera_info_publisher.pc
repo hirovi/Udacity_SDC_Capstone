@@ -1,8 +1,8 @@
-prefix=/home/viewitpro/CarND-Capstone/ros/install
+prefix=/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install
 
 Name: camera_info_publisher
 Description: Description of camera_info_publisher
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/viewitpro/CarND-Capstone/ros/install/lib 
+Libs: -L/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install/lib 
 Requires: 

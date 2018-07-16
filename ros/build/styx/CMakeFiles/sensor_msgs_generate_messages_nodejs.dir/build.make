@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/viewitpro/CarND-Capstone/ros/src
+CMAKE_SOURCE_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/viewitpro/CarND-Capstone/ros/build
+CMAKE_BINARY_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build
 
 # Utility rule file for sensor_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build: sensor_msgs_gene
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 
 styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/viewitpro/CarND-Capstone/ros/build/styx && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/styx && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/viewitpro/CarND-Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/viewitpro/CarND-Capstone/ros/src /home/viewitpro/CarND-Capstone/ros/src/styx /home/viewitpro/CarND-Capstone/ros/build /home/viewitpro/CarND-Capstone/ros/build/styx /home/viewitpro/CarND-Capstone/ros/build/styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src/styx /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/styx /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : styx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 

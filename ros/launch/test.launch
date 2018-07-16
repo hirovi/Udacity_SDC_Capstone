@@ -17,11 +17,9 @@
     -->
     <include file="$(find twist_controller)/launch/dbw_sim.launch"/>
 
-    <!--Traffic Light Detector Node 
+    <!--Traffic Light Detector Node -->
     <include file="$(find tl_detector)/launch/tl_detector.launch"/>
-    -->
 
-    <!--Traffic Light Locations and Camera Config 
+    <!--Traffic Light Locations and Camera Config -->
     <param name="traffic_light_config" textfile="$(find tl_detector)/sim_traffic_light_config.yaml" />
-    -->
 </launch>

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "tl_detector"
-PROJECT_SPACE_DIR = "/home/viewitpro/CarND-Capstone/ros/install"
+PROJECT_SPACE_DIR = "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install"
 PROJECT_VERSION = "0.0.0"

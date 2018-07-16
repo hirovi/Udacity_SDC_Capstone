@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/viewitpro/CarND-Capstone/ros/src
+CMAKE_SOURCE_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/viewitpro/CarND-Capstone/ros/build
+CMAKE_BINARY_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/viewitpro/CarND-Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/viewitpro/CarND-Capstone/ros/src /home/viewitpro/CarND-Capstone/ros/src /home/viewitpro/CarND-Capstone/ros/build /home/viewitpro/CarND-Capstone/ros/build /home/viewitpro/CarND-Capstone/ros/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

@@ -7,7 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/viewitpro/CarND-Capstone/ros/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/viewitpro/CarND-Capstone/ros/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/viewitpro/CarND-Capstone/ros/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/viewitpro/CarND-Capstone/ros/src:$ROS_PACKAGE_PATH"
+export PWD="/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build"
+export ROS_PACKAGE_PATH="/home/viewitpro/CarND-Capstone/ros/src:/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src:/opt/ros/kinetic/share"
