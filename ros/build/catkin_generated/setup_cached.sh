@@ -7,5 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build"
-export ROS_PACKAGE_PATH="/home/viewitpro/CarND-Capstone/ros/src:/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src:/opt/ros/kinetic/share"
+export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
+export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
+export PWD="/home/viewitpro/Udacity_SDC_Capstone/ros/build"
+export PYTHONPATH="/opt/ros/kinetic/lib/python2.7/dist-packages"
+export ROS_PACKAGE_PATH="/home/viewitpro/Udacity_SDC_Capstone/ros/src:/opt/ros/kinetic/share"

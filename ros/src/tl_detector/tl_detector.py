@@ -95,7 +95,7 @@ class TLDetector(object):
         self.lights = msg.lights
 
         # call the tmp_img_cb
-        self.tmp_img_cb(msg)
+        #self.tmp_img_cb(msg)
 
     def tmp_img_cb(self, msg):
 

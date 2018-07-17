@@ -1,8 +1,8 @@
-prefix=/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install
+prefix=/home/viewitpro/Udacity_SDC_Capstone/ros/install
 
 Name: tl_detector
 Description: Description of tl_detector
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install/lib 
+Libs: -L/home/viewitpro/Udacity_SDC_Capstone/ros/install/lib 
 Requires: 

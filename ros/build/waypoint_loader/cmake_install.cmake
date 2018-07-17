@@ -1,8 +1,8 @@
-# Install script for directory: /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src/waypoint_loader
+# Install script for directory: /home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_loader
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/viewitpro/Udacity_SDC_Capstone/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loader.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loader.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_loader/cmake" TYPE FILE FILES
-    "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loaderConfig.cmake"
-    "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loaderConfig-version.cmake"
+    "/home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loaderConfig.cmake"
+    "/home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_loader/catkin_generated/installspace/waypoint_loaderConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_loader" TYPE FILE FILES "/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src/waypoint_loader/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/waypoint_loader" TYPE FILE FILES "/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_loader/package.xml")
 endif()
 

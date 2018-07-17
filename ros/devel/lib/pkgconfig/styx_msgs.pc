@@ -1,8 +1,8 @@
-prefix=/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel
+prefix=/home/viewitpro/Udacity_SDC_Capstone/ros/devel
 
 Name: styx_msgs
 Description: Description of styx_msgs
 Version: 0.0.0
-Cflags: -I/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel/include
-Libs: -L/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel/lib 
+Cflags: -I/home/viewitpro/Udacity_SDC_Capstone/ros/devel/include
+Libs: -L/home/viewitpro/Udacity_SDC_Capstone/ros/devel/lib 
 Requires: 

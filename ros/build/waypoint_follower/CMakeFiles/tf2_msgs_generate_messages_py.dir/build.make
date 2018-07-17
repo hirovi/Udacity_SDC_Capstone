@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src
+CMAKE_SOURCE_DIR = /home/viewitpro/Udacity_SDC_Capstone/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build
+CMAKE_BINARY_DIR = /home/viewitpro/Udacity_SDC_Capstone/ros/build
 
 # Utility rule file for tf2_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/build: tf2_msgs_g
 .PHONY : waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 
 waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean:
-	cd /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_follower && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_follower && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/clean
 
 waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/depend:
-	cd /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src/waypoint_follower /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_follower /home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/build/waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/viewitpro/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/viewitpro/Udacity_SDC_Capstone/ros/src /home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower /home/viewitpro/Udacity_SDC_Capstone/ros/build /home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_follower /home/viewitpro/Udacity_SDC_Capstone/ros/build/waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : waypoint_follower/CMakeFiles/tf2_msgs_generate_messages_py.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel
+prefix=/home/viewitpro/Udacity_SDC_Capstone/ros/devel
 
 Name: waypoint_follower
 Description: Description of waypoint_follower
 Version: 0.0.0
-Cflags: -I/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/src/waypoint_follower/include
-Libs: -L/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel/lib -llibwaypoint_follower
+Cflags: -I/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower/include
+Libs: -L/home/viewitpro/Udacity_SDC_Capstone/ros/devel/lib -llibwaypoint_follower
 Requires: roscpp std_msgs tf geometry_msgs styx_msgs
