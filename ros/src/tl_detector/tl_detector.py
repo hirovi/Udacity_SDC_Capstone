@@ -250,9 +250,6 @@ class TLDetector(object):
                         ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
                 
             
-            
-            
-            
         if closest_light:
             state = self.get_light_state(closest_light)
             return line_wp_idx, state,ret_stop_line_position
