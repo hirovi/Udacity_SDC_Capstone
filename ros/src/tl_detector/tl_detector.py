@@ -94,6 +94,28 @@ class TLDetector(object):
     def traffic_cb(self, msg):
         self.lights = msg.lights
 
+        # call the tmp_img_cb
+        self.tmp_img_cb(msg)
+
+    def tmp_img_cb(self, msg):
+
+
+        light_wp, state , dist_stop_line= self.process_traffic_lights()
+        
+        if self.state != state:
+            self.state_count = 0
+            self.state = state
+        elif self.state_count >= STATE_COUNT_THRESHOLD:
+            self.last_state = self.state
+            light_wp = light_wp if state == TrafficLight.RED else -1
+            self.last_wp = light_wp
+            self.upcoming_red_light_pub.publish(Int32(light_wp))
+        else:
+            self.upcoming_red_light_pub.publish(Int32(self.last_wp))
+        self.state_count += 1
+
+
+
     def image_cb(self, msg):
         """Identifies red lights in the incoming camera image and publishes the index
             of the waypoint closest to the red light's stop line to /traffic_waypoint
@@ -249,6 +271,9 @@ class TLDetector(object):
                         #ret_stop_line_position=line
                         ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
                 
+            
+            
+            
             
         if closest_light:
             state = self.get_light_state(closest_light)
