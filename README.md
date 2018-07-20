@@ -18,6 +18,7 @@ Oscar Rovira (lead) | oscar.roviramontenegro@gmail.com | @hirovi
 JiaWei | JiaWei.You1016@gmail.com | @yjw16
 Atul Pandey | atul799@gmail.com | @atul799
 Cesar Bonadio | cesar.bonadio@gmail.com | @bonadio
+Christy Cui | christycui14@gmail.com | @christycui
 
 
 ## Build & Run Instructions
