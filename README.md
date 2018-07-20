@@ -20,19 +20,19 @@ Cesar Bonadio | cesar.bonadio@gmail.com | @bonadio
 
 # Build & Run Instructions
 
-1. Clone repository.
-'''
+1. *Clone* repository.
+```
 git clone https://github.com/hirovi/Udacity_SDC_Capstone.git
-'''
-2. Install python dependencies.
-'''
+```
+2. *Install* python dependencies.
+```
 cd CarND-Capstone
 pip install -r requirements.txt
-'''
-3. Make and run styx. (No need for roscore)
-'''
+```
+3. *Make* and run styx. (No need for roscore)
+```
 cd ros
 catkin_make
 source devel/setup.sh
 roslaunch launch/styx.launch
-'''
+```
