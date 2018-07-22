@@ -20,7 +20,7 @@ import math
 STATE_COUNT_THRESHOLD = 3
 
 #used to switch traffic light ground truth or state from classifier
-TL_CLASSIFFIER_ON =0
+TL_CLASSIFFIER_ON =1
 
 
 class TLDetector(object):
@@ -55,7 +55,7 @@ class TLDetector(object):
         self.upcoming_red_light_pub = rospy.Publisher('/traffic_waypoint', Int32, queue_size=1)
 
         self.bridge = CvBridge()
-        self.light_classifier = TLClassifier()
+
         self.listener = tf.TransformListener()
 
         self.state = TrafficLight.UNKNOWN
@@ -68,6 +68,7 @@ class TLDetector(object):
         self.waypoint_tree = None      
         
         self.img_count=0
+        self.light_classifier = TLClassifier()
 
         rospy.spin()
 

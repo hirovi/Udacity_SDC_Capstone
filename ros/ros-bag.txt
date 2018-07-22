@@ -1,0 +1,3 @@
+#rosbag record -O ./bag-session.bag -e "/vehicle/(.*)" -e "/current_pose" -e "/current_velocity" -e "/final_waypoints" -e "/traffic_waypoint" -e "/twist_cmd" -e "/base_waypoints" 
+rosbag record -O ./bag-session.bag -e "/twist_cmd" 
+
