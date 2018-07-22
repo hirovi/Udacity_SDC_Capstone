@@ -51,7 +51,8 @@ class TLClassifier(object):
         #image = Image.open(os.path.dirname(os.path.abspath(__file__))+"/Darth-Vader.jpg")
         # the array based representation of the image will be used later in order to prepare the
         # result image with boxes and labels on it.
-        self.image_np = self.load_image_into_numpy_array(image)
+        #self.image_np = self.load_image_into_numpy_array(image)
+        self.image_np = image
 
         # Actual detection.
         output_dict = self.run_inference_for_single_image(self.image_np, self.detection_graph)
