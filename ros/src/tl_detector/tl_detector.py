@@ -138,10 +138,13 @@ class TLDetector(object):
         self.camera_image = msg
         light_wp, state , dist_stop_line= self.process_traffic_lights()
         
+        '''
+        #disable prints msgs 
+        #used logwarn for color encoding of msg (warn brown, info white)
         if verbose:
             rospy.logwarn("dist to stop line is:{}".format(dist_stop_line))  
             rospy.logwarn("light state is:{}".format(state))
-        
+        '''
         '''
         Publish upcoming red lights at camera frequency.
         Each predicted state has to occur `STATE_COUNT_THRESHOLD` number
@@ -232,8 +235,12 @@ class TLDetector(object):
             #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
             cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
             #Get classification
+            '''
+            #disable print msgs
+            
             if verbose:
                 rospy.loginfo("Ground truth light status is {}".format(light.state))
+            '''
             return self.light_classifier.get_classification(cv_image)
             
             
@@ -286,7 +293,21 @@ class TLDetector(object):
             
             
         if closest_light:
-            state = self.get_light_state(closest_light)
+            #fire inference only when car is close to TL
+            if ret_stop_line_position < 15.0:
+                state = self.get_light_state(closest_light)
+            else:
+                state=TrafficLight.UNKNOWN
+            '''
+            #disable prints            
+            if verbose and ret_stop_line_position < 5.0:
+                rospy.loginfo("Ground truth light status is {}".format(closest_light.state))
+                rospy.loginfo("Light state Predicted {}".format(state))
+                if state==closest_light.state:
+                        rospy.loginfo("PASS")
+                else:
+                        rospy.loginfo("FAIL")
+            '''
             return line_wp_idx, state,ret_stop_line_position
         #self.waypoints = None
         return -1, TrafficLight.UNKNOWN,None

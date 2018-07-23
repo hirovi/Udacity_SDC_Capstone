@@ -159,9 +159,11 @@ class TLClassifier(object):
 	
 	
         #rospy.loginfo("In TL detected {} TLs".format(num))
+        '''
+        #disable prints        
         if verbose:
             rospy.loginfo("highest score: {}, mostprobable class: {}".format(scores[0],classes[0]))
-        
+        '''
         state=TrafficLight.UNKNOWN
         #class map from label_map.pbtxt file
         #check if score[0] is greater than threshold and if yes then check class[0]
@@ -183,8 +185,12 @@ class TLClassifier(object):
         #rospy.loginfo("In TL: {} detected".format(state))
         #return TrafficLight.UNKNOWN
         #end of inference
+        
+        '''
+        #disable prints        
         if verbose:
             end_time=datetime.datetime.now()
             time_diff=end_time-start_time
             rospy.loginfo("time taken for inference is:{} seconds ".format(time_diff.seconds))
+        '''
         return state
