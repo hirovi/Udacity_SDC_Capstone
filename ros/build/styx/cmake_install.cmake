@@ -1,8 +1,8 @@
-# Install script for directory: /home/viewitpro/Udacity_SDC_Capstone/ros/src/styx
+# Install script for directory: /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/styx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/viewitpro/Udacity_SDC_Capstone/ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/viewitpro/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styx.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styx.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/styx/cmake" TYPE FILE FILES
-    "/home/viewitpro/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styxConfig.cmake"
-    "/home/viewitpro/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styxConfig-version.cmake"
+    "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styxConfig.cmake"
+    "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/styx/catkin_generated/installspace/styxConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/styx" TYPE FILE FILES "/home/viewitpro/Udacity_SDC_Capstone/ros/src/styx/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/styx" TYPE FILE FILES "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/styx/package.xml")
 endif()
 

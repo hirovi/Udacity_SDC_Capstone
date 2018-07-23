@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "waypoint_loader"
-PROJECT_SPACE_DIR = "/home/viewitpro/Udacity_SDC_Capstone/ros/devel"
+PROJECT_SPACE_DIR = "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel"
 PROJECT_VERSION = "0.0.0"

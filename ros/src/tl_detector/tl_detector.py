@@ -17,11 +17,45 @@ from scipy.spatial import KDTree
 import math
 
 
+'''
+#TrafficLight.state codes
+uint8 UNKNOWN=4
+uint8 GREEN=2
+uint8 YELLOW=1
+uint8 RED=0
+'''
+
+'''
+#pbtext traffic light encoding
+item {
+  id: 1
+  name: 'Green'
+}
+
+item {
+  id: 2
+  name: 'Red'
+}
+
+item {
+  id: 3
+  name: 'Yellow'
+}
+
+item {
+  id: 4
+  name: 'off'
+}
+
+
+'''
+
+
 STATE_COUNT_THRESHOLD = 3
 
 #used to switch traffic light ground truth or state from classifier
 TL_CLASSIFFIER_ON =1
-
+verbose=1
 
 class TLDetector(object):
     def __init__(self):
@@ -104,10 +138,9 @@ class TLDetector(object):
         self.camera_image = msg
         light_wp, state , dist_stop_line= self.process_traffic_lights()
         
-        
-        rospy.logwarn("dist to stop line is:{}".format(dist_stop_line))        
-        
-        rospy.logwarn("light state is:{}".format(state))
+        if verbose:
+            rospy.logwarn("dist to stop line is:{}".format(dist_stop_line))  
+            rospy.logwarn("light state is:{}".format(state))
         
         '''
         Publish upcoming red lights at camera frequency.
@@ -193,12 +226,17 @@ class TLDetector(object):
         if TL_CLASSIFFIER_ON:        
             if(not self.has_image):
                 self.prev_light_loc = None
-                return False
+                #return False
+                return TrafficLight.UNKNOWN
 
-            cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
-
+            #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
+            cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
             #Get classification
+            if verbose:
+                rospy.loginfo("Ground truth light status is {}".format(light.state))
             return self.light_classifier.get_classification(cv_image)
+            
+            
         
         else :
             return light.state

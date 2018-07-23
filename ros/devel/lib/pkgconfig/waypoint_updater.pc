@@ -1,8 +1,8 @@
-prefix=/home/viewitpro/Udacity_SDC_Capstone/ros/devel
+prefix=/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel
 
 Name: waypoint_updater
 Description: Description of waypoint_updater
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/viewitpro/Udacity_SDC_Capstone/ros/devel/lib 
+Libs: -L/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/lib 
 Requires: 

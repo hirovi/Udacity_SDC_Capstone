@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/viewitpro/Udacity_SDC_Capstone/ros/build"
+export PWD="/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build"

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/viewitpro/Udacity_SDC_Capstone/ros/devel/include/styx_msgs/Lane.h
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/include/styx_msgs/Lane.h
 string
 -
 vector
@@ -26,7 +26,7 @@ std_msgs/Header.h
 styx_msgs/Waypoint.h
 -
 
-/home/viewitpro/Udacity_SDC_Capstone/ros/devel/include/styx_msgs/Waypoint.h
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/include/styx_msgs/Waypoint.h
 string
 -
 vector
@@ -46,7 +46,7 @@ geometry_msgs/PoseStamped.h
 geometry_msgs/TwistStamped.h
 -
 
-/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower/include/libwaypoint_follower.h
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/include/libwaypoint_follower.h
 iostream
 -
 sstream
@@ -58,11 +58,11 @@ tf/transform_broadcaster.h
 tf/transform_listener.h
 -
 styx_msgs/Lane.h
-/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower/include/styx_msgs/Lane.h
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/include/styx_msgs/Lane.h
 
-/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower/lib/libwaypoint_follower.cpp
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/lib/libwaypoint_follower.cpp
 libwaypoint_follower.h
-/home/viewitpro/Udacity_SDC_Capstone/ros/src/waypoint_follower/lib/libwaypoint_follower.h
+/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/lib/libwaypoint_follower.h
 
 /opt/ros/kinetic/include/boost_161_condition_variable.h
 boost/thread/detail/platform.hpp
