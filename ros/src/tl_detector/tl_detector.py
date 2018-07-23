@@ -110,6 +110,8 @@ class TLDetector(object):
         self.current_light_state = None
         self.ret_stop_line_position = None
 
+
+    def spin(self):
         rospy.spin()
 
     def pose_cb(self, msg):
@@ -346,5 +348,6 @@ if __name__ == '__main__':
     try:
         tld = TLDetector()
         runOff()
+        tld.spin()
     except rospy.ROSInterruptException:
         rospy.logerr('Could not start traffic node.')
