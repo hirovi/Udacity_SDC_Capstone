@@ -10,7 +10,8 @@ from light_classification.tl_classifier import TLClassifier
 import tf
 import cv2
 import yaml
-
+import threading
+from time import sleep
 
 from scipy.spatial import KDTree
 
@@ -56,6 +57,8 @@ STATE_COUNT_THRESHOLD = 3
 #used to switch traffic light ground truth or state from classifier
 TL_CLASSIFFIER_ON =1
 verbose=1
+
+DISTANCE_TO_TRAFFIC_LIGHT= 15.0
 
 class TLDetector(object):
     def __init__(self):
@@ -103,6 +106,9 @@ class TLDetector(object):
         
         self.img_count=0
         self.light_classifier = TLClassifier()
+
+        self.current_light_state = None
+        self.ret_stop_line_position = None
 
         rospy.spin()
 
@@ -212,7 +218,25 @@ class TLDetector(object):
         return  closest_idx       
         
         
+    def get_off_light(self):
         
+        if TL_CLASSIFFIER_ON and self.ret_stop_line_position < DISTANCE_TO_TRAFFIC_LIGHT:        
+            if(not self.has_image):
+                self.prev_light_loc = None
+                
+                self.current_light_state =  TrafficLight.UNKNOWN
+
+            #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
+            cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
+            #Get classification
+            '''
+            #disable print msgs
+            
+            if verbose:
+                rospy.loginfo("Ground truth light status is {}".format(light.state))
+            '''
+            self.current_light_state = self.light_classifier.get_classification(cv_image)
+    
 
     def get_light_state(self, light):
         """Determines the current color of the traffic light
@@ -241,7 +265,8 @@ class TLDetector(object):
             if verbose:
                 rospy.loginfo("Ground truth light status is {}".format(light.state))
             '''
-            return self.light_classifier.get_classification(cv_image)
+            #return self.light_classifier.get_classification(cv_image)
+            return self.current_light_state
             
             
         
@@ -286,7 +311,7 @@ class TLDetector(object):
                         closest_light = light
                         line_wp_idx= temp_wp_idx
                         #ret_stop_line_position=line
-                        ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
+                        self.ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
                 
             
             
@@ -294,7 +319,7 @@ class TLDetector(object):
             
         if closest_light:
             #fire inference only when car is close to TL
-            if ret_stop_line_position < 15.0:
+            if self.ret_stop_line_position < DISTANCE_TO_TRAFFIC_LIGHT:
                 state = self.get_light_state(closest_light)
             else:
                 state=TrafficLight.UNKNOWN
@@ -312,8 +337,14 @@ class TLDetector(object):
         #self.waypoints = None
         return -1, TrafficLight.UNKNOWN,None
 
+
+def runOff():
+  threading.Timer(1.0, runOff).start()
+  tld.get_off_light()
+
 if __name__ == '__main__':
     try:
-        TLDetector()
+        tld = TLDetector()
+        runOff()
     except rospy.ROSInterruptException:
         rospy.logerr('Could not start traffic node.')
