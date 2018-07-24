@@ -58,7 +58,7 @@ STATE_COUNT_THRESHOLD = 3
 TL_CLASSIFFIER_ON =1
 verbose=1
 
-DISTANCE_TO_TRAFFIC_LIGHT= 15.0
+DISTANCE_TO_TRAFFIC_LIGHT= 200.0
 
 class TLDetector(object):
     def __init__(self):
@@ -147,6 +147,9 @@ class TLDetector(object):
         self.camera_image = msg
         light_wp, state , dist_stop_line= self.process_traffic_lights()
         
+
+        rospy.logwarn("dist to stop line is:{}".format(dist_stop_line))  
+        rospy.logwarn("light state is:{}".format(state))
         '''
         #disable prints msgs 
         #used logwarn for color encoding of msg (warn brown, info white)
@@ -231,6 +234,7 @@ class TLDetector(object):
 
             #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
             if self.camera_image:
+                rospy.logwarn("Running classifier")
                 cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
                 self.current_light_state = self.light_classifier.get_classification(cv_image)
     
@@ -330,14 +334,14 @@ class TLDetector(object):
                 else:
                         rospy.loginfo("FAIL")
             '''
-            return line_wp_idx, state,ret_stop_line_position
+            return line_wp_idx, state,self.ret_stop_line_position
         #self.waypoints = None
         return -1, TrafficLight.UNKNOWN,None
 
 
 def runOff():
-  threading.Timer(1.0, runOff).start()
-  tld.get_off_light()
+    threading.Timer(1.0, runOff).start()
+    tld.get_off_light()
 
 if __name__ == '__main__':
     try:
