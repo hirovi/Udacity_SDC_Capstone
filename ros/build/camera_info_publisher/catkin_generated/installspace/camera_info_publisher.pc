@@ -1,8 +1,0 @@
-prefix=/home/viewitpro/tt/Udacity_SDC_Capstone/ros/install
-
-Name: camera_info_publisher
-Description: Description of camera_info_publisher
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/viewitpro/tt/Udacity_SDC_Capstone/ros/install/lib 
-Requires: 

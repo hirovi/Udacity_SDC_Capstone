@@ -1,8 +1,0 @@
-prefix=/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel
-
-Name: waypoint_loader
-Description: Description of waypoint_loader
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/lib 
-Requires: 
