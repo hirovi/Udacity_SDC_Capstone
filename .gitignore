@@ -1,3 +1,4 @@
 ros/build*/*
+ros/devel*/*
 *.pyc
 ros/src/tl_detector/backup_from_git/*

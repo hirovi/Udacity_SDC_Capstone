@@ -7,3 +7,4 @@ stop_line_positions:
     - [8.0, 16.2]
 
 model : "ssd_inception_site_9800steps.pb"
+label : "label_map.pbtxt"
