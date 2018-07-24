@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build"
+export CMAKE_PREFIX_PATH="/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/viewitpro/tt/Udacity_SDC_Capstone/ros/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src:$ROS_PACKAGE_PATH"

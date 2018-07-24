@@ -109,6 +109,7 @@ class TLDetector(object):
 
         self.current_light_state = None
         self.ret_stop_line_position = None
+        self.has_image = None
 
 
     def spin(self):
@@ -229,15 +230,9 @@ class TLDetector(object):
                 self.current_light_state =  TrafficLight.UNKNOWN
 
             #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
-            cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
-            #Get classification
-            '''
-            #disable print msgs
-            
-            if verbose:
-                rospy.loginfo("Ground truth light status is {}".format(light.state))
-            '''
-            self.current_light_state = self.light_classifier.get_classification(cv_image)
+            if self.camera_image:
+                cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
+                self.current_light_state = self.light_classifier.get_classification(cv_image)
     
 
     def get_light_state(self, light):
@@ -348,6 +343,6 @@ if __name__ == '__main__':
     try:
         tld = TLDetector()
         runOff()
-        tld.spin()
+        #tld.spin()
     except rospy.ROSInterruptException:
         rospy.logerr('Could not start traffic node.')

@@ -1,8 +1,8 @@
-prefix=/home/atpandey/test_p/Udacity_SDC_Capstone/ros/install
+prefix=/home/viewitpro/tt/Udacity_SDC_Capstone/ros/install
 
 Name: styx
 Description: Description of styx
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/atpandey/test_p/Udacity_SDC_Capstone/ros/install/lib 
+Libs: -L/home/viewitpro/tt/Udacity_SDC_Capstone/ros/install/lib 
 Requires: 

@@ -67,14 +67,14 @@ set(waypoint_follower_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(waypoint_follower_SOURCE_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower)
-  set(waypoint_follower_DEVEL_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel)
+  set(waypoint_follower_SOURCE_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/waypoint_follower)
+  set(waypoint_follower_DEVEL_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel)
   set(waypoint_follower_INSTALL_PREFIX "")
   set(waypoint_follower_PREFIX ${waypoint_follower_DEVEL_PREFIX})
 else()
   set(waypoint_follower_SOURCE_PREFIX "")
   set(waypoint_follower_DEVEL_PREFIX "")
-  set(waypoint_follower_INSTALL_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/install)
+  set(waypoint_follower_INSTALL_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/install)
   set(waypoint_follower_PREFIX ${waypoint_follower_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(waypoint_follower_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/include " STREQUAL " ")
+if(NOT "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/waypoint_follower/include " STREQUAL " ")
   set(waypoint_follower_INCLUDE_DIRS "")
-  set(_include_dirs "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/include")
+  set(_include_dirs "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/waypoint_follower/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/inc
         message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/waypoint_follower/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'waypoint_follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/waypoint_follower/${idir}'.  ${_report}")
     endif()
     _list_append_unique(waypoint_follower_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/lib;/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/lib;/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

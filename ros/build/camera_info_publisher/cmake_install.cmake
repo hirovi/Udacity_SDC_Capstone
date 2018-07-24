@@ -1,8 +1,8 @@
-# Install script for directory: /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/camera_info_publisher
+# Install script for directory: /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/camera_info_publisher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/install")
+  set(CMAKE_INSTALL_PREFIX "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisher.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisher.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_info_publisher/cmake" TYPE FILE FILES
-    "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisherConfig.cmake"
-    "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisherConfig-version.cmake"
+    "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisherConfig.cmake"
+    "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher/catkin_generated/installspace/camera_info_publisherConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_info_publisher" TYPE FILE FILES "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/camera_info_publisher/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/camera_info_publisher" TYPE FILE FILES "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/camera_info_publisher/package.xml")
 endif()
 

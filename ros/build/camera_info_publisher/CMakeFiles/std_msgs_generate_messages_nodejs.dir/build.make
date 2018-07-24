@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src
+CMAKE_SOURCE_DIR = /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build
+CMAKE_BINARY_DIR = /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build
 
 # Utility rule file for std_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build: st
 .PHONY : camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 
 camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/camera_info_publisher /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher /home/atpandey/test_p/Udacity_SDC_Capstone/ros/build/camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/camera_info_publisher /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher /home/viewitpro/tt/Udacity_SDC_Capstone/ros/build/camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : camera_info_publisher/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 

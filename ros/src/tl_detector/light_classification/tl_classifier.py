@@ -6,11 +6,11 @@ from styx_msgs.msg import Lane
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
-from utils import visualization_utils as vis_util
-from utils import label_map_util
+#from utils import visualization_utils as vis_util
+#from utils import label_map_util
 
-from matplotlib import  pyplot as plt
-from matplotlib import  image as mpimg
+#from matplotlib import  pyplot as plt
+#from matplotlib import  image as mpimg
 ####using object detection example in TF API
 
 import tensorflow as tf
@@ -56,10 +56,10 @@ class TLClassifier(object):
         self.PATH_TO_LABEL=r"{}".format(self.conf["label"])
         
         
-        self.label_map=label_map_util.load_labelmap(self.PATH_TO_LABEL)
+#        self.label_map=label_map_util.load_labelmap(self.PATH_TO_LABEL)
         
-        self.categories=label_map_util.convert_label_map_to_categories(self.label_map,max_num_classes=NUM_CLASSES,use_display_name=True)
-        self.category_index=label_map_util.create_category_index(self.categories)
+#        self.categories=label_map_util.convert_label_map_to_categories(self.label_map,max_num_classes=NUM_CLASSES,use_display_name=True)
+#        self.category_index=label_map_util.create_category_index(self.categories)
         
         
         #threshold of detection score for trafffic light state selection

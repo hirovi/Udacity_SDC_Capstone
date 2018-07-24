@@ -67,14 +67,14 @@ set(styx_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(styx_msgs_SOURCE_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/styx_msgs)
-  set(styx_msgs_DEVEL_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel)
+  set(styx_msgs_SOURCE_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/styx_msgs)
+  set(styx_msgs_DEVEL_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel)
   set(styx_msgs_INSTALL_PREFIX "")
   set(styx_msgs_PREFIX ${styx_msgs_DEVEL_PREFIX})
 else()
   set(styx_msgs_SOURCE_PREFIX "")
   set(styx_msgs_DEVEL_PREFIX "")
-  set(styx_msgs_INSTALL_PREFIX /home/atpandey/test_p/Udacity_SDC_Capstone/ros/install)
+  set(styx_msgs_INSTALL_PREFIX /home/viewitpro/tt/Udacity_SDC_Capstone/ros/install)
   set(styx_msgs_PREFIX ${styx_msgs_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(styx_msgs_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/include " STREQUAL " ")
+if(NOT "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/include " STREQUAL " ")
   set(styx_msgs_INCLUDE_DIRS "")
-  set(_include_dirs "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/include")
+  set(_include_dirs "/home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/include " STREQUAL 
         message(FATAL_ERROR "Project 'styx_msgs' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'styx_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/atpandey/test_p/Udacity_SDC_Capstone/ros/src/styx_msgs/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'styx_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/viewitpro/tt/Udacity_SDC_Capstone/ros/src/styx_msgs/${idir}'.  ${_report}")
     endif()
     _list_append_unique(styx_msgs_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/lib;/home/atpandey/test_p/Udacity_SDC_Capstone/ros/devel/lib;/home/atpandey/Group_Project/Udacity_SDC_Capstone/ros/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/viewitpro/tt/Udacity_SDC_Capstone/ros/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
