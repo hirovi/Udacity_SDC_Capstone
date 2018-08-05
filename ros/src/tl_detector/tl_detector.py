@@ -10,14 +10,21 @@ from light_classification.tl_classifier import TLClassifier
 import tf
 import cv2
 import yaml
-import threading
-from time import sleep
+
 
 from scipy.spatial import KDTree
 
 import math
 
 
+'''
+#comment: 04/08/2018
+###This code for resubmission.
+###The sleep as well as enabling TL Classifier only when
+###vehicle is under 200 metres range is disabled
+###These tricks were applied to do away with simulator latency
+###Found reveiwers don't have latency issue, so disabled
+'''
 '''
 #TrafficLight.state codes
 uint8 UNKNOWN=4
@@ -32,23 +39,18 @@ item {
   id: 1
   name: 'Green'
 }
-
 item {
   id: 2
   name: 'Red'
 }
-
 item {
   id: 3
   name: 'Yellow'
 }
-
 item {
   id: 4
   name: 'off'
 }
-
-
 '''
 
 
@@ -57,8 +59,6 @@ STATE_COUNT_THRESHOLD = 3
 #used to switch traffic light ground truth or state from classifier
 TL_CLASSIFFIER_ON =1
 verbose=1
-
-DISTANCE_TO_TRAFFIC_LIGHT= 200.0
 
 class TLDetector(object):
     def __init__(self):
@@ -107,12 +107,6 @@ class TLDetector(object):
         self.img_count=0
         self.light_classifier = TLClassifier()
 
-        self.current_light_state = None
-        self.ret_stop_line_position = None
-        self.has_image = None
-
-
-    def spin(self):
         rospy.spin()
 
     def pose_cb(self, msg):
@@ -138,18 +132,13 @@ class TLDetector(object):
     def image_cb(self, msg):
         """Identifies red lights in the incoming camera image and publishes the index
             of the waypoint closest to the red light's stop line to /traffic_waypoint
-
         Args:
             msg (Image): image from car-mounted camera
-
         """
         self.has_image = True
         self.camera_image = msg
         light_wp, state , dist_stop_line= self.process_traffic_lights()
         
-
-        rospy.logwarn("dist to stop line is:{}".format(dist_stop_line))  
-        rospy.logwarn("light state is:{}".format(state))
         '''
         #disable prints msgs 
         #used logwarn for color encoding of msg (warn brown, info white)
@@ -179,7 +168,6 @@ class TLDetector(object):
                 img_file='img_{}_GREEN.png'.format(self.img_count)
             else:
                 img_file='img_{}_UX.png'.format(self.img_count)
-
         else:
             img_file='img_{}_UX.png'.format(self.img_count)
             
@@ -190,7 +178,6 @@ class TLDetector(object):
         rospy.logwarn("img_file_name is:{}".format(save_file))
         
         self.img_count += 1
-
         ####################################3        
         
         '''
@@ -213,10 +200,8 @@ class TLDetector(object):
             https://en.wikipedia.org/wiki/Closest_pair_of_points_problem
         Args:
             pose (Pose): position to match a waypoint to
-
         Returns:
             int: index of the closest waypoint in self.waypoints
-
         """
         #TODO implement
         #return 0
@@ -224,30 +209,14 @@ class TLDetector(object):
         return  closest_idx       
         
         
-    def get_off_light(self):
         
-        if TL_CLASSIFFIER_ON and self.ret_stop_line_position < DISTANCE_TO_TRAFFIC_LIGHT:        
-            if(not self.has_image):
-                self.prev_light_loc = None
-                
-                self.current_light_state =  TrafficLight.UNKNOWN
-
-            #cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
-            if self.camera_image:
-                rospy.logwarn("Running classifier")
-                cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "rgb8")
-                self.current_light_state = self.light_classifier.get_classification(cv_image)
-    
 
     def get_light_state(self, light):
         """Determines the current color of the traffic light
-
         Args:
             light (TrafficLight): light to classify
-
         Returns:
             int: ID of traffic light color (specified in styx_msgs/TrafficLight)
-
         """
         
         #if data available from classifier use it else use ground truth from simulator
@@ -266,8 +235,7 @@ class TLDetector(object):
             if verbose:
                 rospy.loginfo("Ground truth light status is {}".format(light.state))
             '''
-            #return self.light_classifier.get_classification(cv_image)
-            return self.current_light_state
+            return self.light_classifier.get_classification(cv_image)
             
             
         
@@ -278,11 +246,9 @@ class TLDetector(object):
     def process_traffic_lights(self):
         """Finds closest visible traffic light, if one exists, and determines its
             location and color
-
         Returns:
             int: index of waypoint closes to the upcoming stop line for a traffic light (-1 if none exists)
             int: ID of traffic light color (specified in styx_msgs/TrafficLight)
-
         """
         #light = None
         #return values
@@ -312,41 +278,42 @@ class TLDetector(object):
                         closest_light = light
                         line_wp_idx= temp_wp_idx
                         #ret_stop_line_position=line
-                        self.ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
+                        ret_stop_line_position=math.sqrt((self.pose.pose.position.x-line[0])**2+(self.pose.pose.position.y-line[1])**2)
                 
             
             
             
             
         if closest_light:
-            #fire inference only when car is close to TL
-            if self.ret_stop_line_position < DISTANCE_TO_TRAFFIC_LIGHT:
-                state = self.get_light_state(closest_light)
-            else:
-                state=TrafficLight.UNKNOWN
-            '''
-            #disable prints            
+            
+	    ##################################################
+	    #fire inference only when car is close to TL
+            #if ret_stop_line_position < 15.0:
+            #    state = self.get_light_state(closest_light)
+            #else:
+            #    state=TrafficLight.UNKNOWN
+	    ##################################################
+	    
+	    state = self.get_light_state(closest_light)
+	    
+            
+            #prints            
             if verbose and ret_stop_line_position < 5.0:
-                rospy.loginfo("Ground truth light status is {}".format(closest_light.state))
-                rospy.loginfo("Light state Predicted {}".format(state))
+                
+                rospy.loginfo("Distance to light: {}".format(ret_stop_line_position))
+		rospy.loginfo("Light state Predicted {}".format(state))
+		rospy.loginfo("Ground truth light status is {}".format(closest_light.state))
                 if state==closest_light.state:
                         rospy.loginfo("PASS")
                 else:
                         rospy.loginfo("FAIL")
-            '''
-            return line_wp_idx, state,self.ret_stop_line_position
+            
+            return line_wp_idx, state,ret_stop_line_position
         #self.waypoints = None
         return -1, TrafficLight.UNKNOWN,None
 
-
-def runOff():
-    threading.Timer(1.0, runOff).start()
-    tld.get_off_light()
-
 if __name__ == '__main__':
     try:
-        tld = TLDetector()
-        runOff()
-        #tld.spin()
+        TLDetector()
     except rospy.ROSInterruptException:
-        rospy.logerr('Could not start traffic node.')
+	rospy.logerr('Could not start traffic node.')
